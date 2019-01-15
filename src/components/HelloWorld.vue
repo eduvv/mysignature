@@ -34,6 +34,18 @@
         <v-card pa-2>
           <!-- SIGNATURE START -->
           <table id="signature" class="pa-2" width="500" cellspacing="0" cellpadding="0" border="0">
+            <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/brands.css"
+      integrity="sha384-1KLgFVb/gHrlDGLFPgMbeedi6tQBLcWvyNUN+YKXbD7ZFbjX6BLpMDf0PJ32XJfX"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css"
+      integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0"
+      crossorigin="anonymous"
+    />
             <tr>
               <td>
                 <table cellspacing="0" cellpadding="0" border="0">
