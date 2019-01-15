@@ -34,18 +34,8 @@
         <v-card pa-2>
           <!-- SIGNATURE START -->
           <table id="signature" class="pa-2" width="500" cellspacing="0" cellpadding="0" border="0">
-            <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.6.3/css/brands.css"
-      integrity="sha384-1KLgFVb/gHrlDGLFPgMbeedi6tQBLcWvyNUN+YKXbD7ZFbjX6BLpMDf0PJ32XJfX"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css"
-      integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0"
-      crossorigin="anonymous"
-    />
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/brands.css" integrity="sha384-1KLgFVb/gHrlDGLFPgMbeedi6tQBLcWvyNUN+YKXbD7ZFbjX6BLpMDf0PJ32XJfX" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/fontawesome.css" integrity="sha384-jLuaxTTBR42U2qJ/pm4JRouHkEDHkVqH0T1nyQXn1mZ7Snycpf6Rl25VBNthU4z0" crossorigin="anonymous">
             <tr>
               <td>
                 <table cellspacing="0" cellpadding="0" border="0">
@@ -102,28 +92,28 @@
                         <tr>
                           <td style="padding: 4px 0 0 0;">
                             <a href="Https://www.facebook.com/wearetothepoint">
-                              <i class="fab fa-facebook-square fa-2x" :style="{ color:  companyData[`${radioGroup}`].colorCode}"></i>
+                              <img :src="companyData[`${radioGroup}`].icons.facebook"/>
                             </a>
                           </td>
                         </tr>
                         <tr>
                           <td style="padding: 4px 0 0 0;">
                             <a href="Https://www.linkedin.com/company/wearetothepoint/">
-                              <i class="fab fa-linkedin fa-2x" :style="{ color:  companyData[`${radioGroup}`].colorCode}"></i>
+                              <img :src="companyData[`${radioGroup}`].icons.linkedin"/>
                             </a>
                           </td>
                         </tr>
                         <tr>
                           <td style="padding: 4px 0 0 0;">
                             <a href="Https://www.twitter.com/wearetothepoint/">
-                              <i class="fab fa-twitter fa-2x" :style="{ color:  companyData[`${radioGroup}`].colorCode}"></i>
+                              <img :src="companyData[`${radioGroup}`].icons.twitter"/>
                             </a>
                           </td>
                         </tr>
                         <tr>
                           <td style="padding: 4px 0 0 0;">
                             <a href="Https://www.instagram.com/wearetothepoint/">
-                              <i class="fab fa-instagram fa-2x" :style="{ color:  companyData[`${radioGroup}`].colorCode}"></i>
+                              <img width="25" :src="companyData[`${radioGroup}`].icons.instagram"/>
                             </a>
                           </td>
                         </tr>
@@ -138,9 +128,12 @@
         </v-card>
       </v-flex>
     </v-layout>
-    <v-layout justify-center>
-      <v-flex>
-        <v-btn @click="copy">copy to clipboard</v-btn>
+    <v-layout align-start justify-start row>
+      <v-flex 3 align-start justify-startxs>
+        <v-btn @click="copyHTML">copy HTML to clipboard</v-btn>
+      </v-flex>
+      <v-flex align-start justify-start xs3>
+        <v-btn @click="copyElement">copy element to clipboard</v-btn>
       </v-flex>
     </v-layout>
   </v-container>
@@ -158,29 +151,53 @@ export default {
       {
         url: "tothepoint.group/family/tothepoint",
         imgUrl: "https://i.imgur.com/5GMFRf9.png",
-        colorCode: "#689f38"
+        colorCode: "#689f38",
+        icons: {
+          facebook: "https://i.imgur.com/wjdukFb.png",
+          instagram: "https://i.imgur.com/8Mpz2mp.png",
+          linkedin: "https://i.imgur.com/0IqGHB4.png",
+          twitter: "https://i.imgur.com/3Ncu7Yg.png"
+        }
       },
       {
         url: "tothepoint.group/family/onedot ",
         imgUrl: "https://i.imgur.com/noWBjCQ.png",
-        colorCode: "#F25929"
+        colorCode: "#F25929",
+        icons: {
+          facebook: "https://i.imgur.com/naTkZZm.png",
+          instagram: "https://i.imgur.com/pqRDZH9.png",
+          linkedin: "https://i.imgur.com/EFgcL84.png",
+          twitter: "https://i.imgur.com/zJB8dhn.png"
+        }
       },
       {
         url: "tothepoint.group/family/onthespot",
         imgUrl: "https://i.imgur.com/kS616Vn.png",
-        colorCode: "#6EAA39"
+        colorCode: "#6EAA39",
+        icons: {
+          facebook: "https://i.imgur.com/z2ZBADq.png",
+          instagram: "https://i.imgur.com/7nETuss.png",
+          linkedin: "https://i.imgur.com/MEwnfsL.png",
+          twitter: "https://i.imgur.com/vEKUlJd.png"
+        }
       },
       {
         url: "tothepoint.group",
         imgUrl: "https://i.imgur.com/7hJts7s.png",
-        colorCode: "#000000"
+        colorCode: "#000000",
+        icons: {
+          facebook: "https://i.imgur.com/an01cnq.png",
+          instagram: "https://i.imgur.com/Ra0YFiX.png",
+          linkedin: "https://i.imgur.com/z4cnVKy.png",
+          twitter: "https://i.imgur.com/EWWYJQy.png"
+        }
       }
     ],
     address: "Veldkant 33a, 2550 Kontich",
     radioGroup: 0
   }),
   methods: {
-    copy() {
+    copyHTML() {
       var x = document.getElementById("signature");
       var elementHtml = x.outerHTML;
       navigator.clipboard
@@ -193,6 +210,17 @@ export default {
           console.error("Could not copy text: ", err);
         });
       console.log(elementHtml);
+    },
+    copyElement() {
+      var x = document.getElementById("signature").outerHTML;
+      function listener(e) {
+        e.clipboardData.setData("text/html", x);
+        //e.clipboardData.setData("text/plain", x);
+        e.preventDefault();
+      }
+      document.addEventListener("copy", listener);
+      document.execCommand("copy");
+      document.removeEventListener("copy", listener);
     }
   }
 };

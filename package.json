@@ -1,11 +1,13 @@
 {
   "name": "mysignature",
   "version": "0.1.0",
+  "homepage": "https://github.com/eduvv/mysignature",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "node ./node_modules/vue-gh-pages/index.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.12",
@@ -27,7 +29,6 @@
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
     "vue-cli-plugin-vuetify": "^0.4.6",
-    "vue-gh-pages": "^1.19.0",
     "vue-template-compiler": "^2.5.21"
   }
 }
