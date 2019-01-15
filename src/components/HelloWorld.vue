@@ -129,12 +129,8 @@
       </v-flex>
     </v-layout>
     <v-layout align-start justify-start row>
-      <v-flex 3 align-start justify-startxs>
+        <v-btn style="color: white;" :color="companyData[`${radioGroup}`].colorCode" @click="copyElement">copy element to clipboard</v-btn>
         <v-btn @click="copyHTML">copy HTML to clipboard</v-btn>
-      </v-flex>
-      <v-flex align-start justify-start xs3>
-        <v-btn @click="copyElement">copy element to clipboard</v-btn>
-      </v-flex>
     </v-layout>
   </v-container>
 </template>
