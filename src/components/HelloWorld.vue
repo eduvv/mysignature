@@ -90,28 +90,28 @@
                         <tr>
                           <td style="padding: 4px 0 0 0;">
                             <a href="Https://www.facebook.com/wearetothepoint">
-                              <font-awesome-icon :icon="['fab', 'facebook-square']" size="2x" :style="{ color:  companyData[`${radioGroup}`].colorCode}"></font-awesome-icon>
+                              <i class="fab fa-facebook-square fa-2x" :style="{ color:  companyData[`${radioGroup}`].colorCode}"></i>
                             </a>
                           </td>
                         </tr>
                         <tr>
                           <td style="padding: 4px 0 0 0;">
                             <a href="Https://www.linkedin.com/company/wearetothepoint/">
-                              <font-awesome-icon :icon="['fab', 'linkedin']" size="2x" :style="{ color:  companyData[`${radioGroup}`].colorCode}"></font-awesome-icon>
+                              <i class="fab fa-linkedin fa-2x" :style="{ color:  companyData[`${radioGroup}`].colorCode}"></i>
                             </a>
                           </td>
                         </tr>
                         <tr>
                           <td style="padding: 4px 0 0 0;">
                             <a href="Https://www.twitter.com/wearetothepoint/">
-                              <font-awesome-icon :icon="['fab', 'twitter-square']" size="2x" :style="{ color:  companyData[`${radioGroup}`].colorCode}"></font-awesome-icon>
+                              <i class="fab fa-twitter fa-2x" :style="{ color:  companyData[`${radioGroup}`].colorCode}"></i>
                             </a>
                           </td>
                         </tr>
                         <tr>
                           <td style="padding: 4px 0 0 0;">
                             <a href="Https://www.instagram.com/wearetothepoint/">
-                              <font-awesome-icon :icon="['fab', 'instagram']" size="2x" :style="{ color:  companyData[`${radioGroup}`].colorCode}"></font-awesome-icon>
+                              <i class="fab fa-instagram fa-2x" :style="{ color:  companyData[`${radioGroup}`].colorCode}"></i>
                             </a>
                           </td>
                         </tr>
