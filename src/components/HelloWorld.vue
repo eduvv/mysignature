@@ -41,7 +41,9 @@
                 <table cellspacing="0" cellpadding="0" border="0">
                   <tr>
                     <td valign="top" width="100" style="padding:0 8px 0 0;vertical-align: top;">
-                      <img width="100" style="width:100px;moz-border-radius:10%;khtml-border-radius:10%;o-border-radius:10%;webkit-border-radius:10%;ms-border-radius:10%;border-radius:10%;" :src="companyData[`${radioGroup}`].imgUrl">
+                      <a :href="'https://' + companyData[`${radioGroup}`].url">
+                        <img width="100" style="width:100px;moz-border-radius:10%;khtml-border-radius:10%;o-border-radius:10%;webkit-border-radius:10%;ms-border-radius:10%;border-radius:10%;" :src="companyData[`${radioGroup}`].imgUrl">
+                      </a>
                     </td>
                     <td style="font-size:1em;padding:0 15px 0 8px;vertical-align: top;" valign="top">
                       <table cellspacing="0" cellpadding="0" border="0" style="line-height: 1.4;font-family:Verdana, Geneva, sans-serif;font-size:90%;color: #000001;">
@@ -92,28 +94,28 @@
                         <tr>
                           <td style="padding: 4px 0 0 0;">
                             <a href="Https://www.facebook.com/wearetothepoint">
-                              <img :src="companyData[`${radioGroup}`].icons.facebook"/>
+                              <img :src="companyData[`${radioGroup}`].icons.facebook">
                             </a>
                           </td>
                         </tr>
                         <tr>
                           <td style="padding: 4px 0 0 0;">
                             <a href="Https://www.linkedin.com/company/wearetothepoint/">
-                              <img :src="companyData[`${radioGroup}`].icons.linkedin"/>
+                              <img :src="companyData[`${radioGroup}`].icons.linkedin">
                             </a>
                           </td>
                         </tr>
                         <tr>
                           <td style="padding: 4px 0 0 0;">
                             <a href="Https://www.twitter.com/wearetothepoint/">
-                              <img :src="companyData[`${radioGroup}`].icons.twitter"/>
+                              <img :src="companyData[`${radioGroup}`].icons.twitter">
                             </a>
                           </td>
                         </tr>
                         <tr>
                           <td style="padding: 4px 0 0 0;">
                             <a href="Https://www.instagram.com/wearetothepoint/">
-                              <img width="25" :src="companyData[`${radioGroup}`].icons.instagram"/>
+                              <img width="25" :src="companyData[`${radioGroup}`].icons.instagram">
                             </a>
                           </td>
                         </tr>
@@ -129,8 +131,8 @@
       </v-flex>
     </v-layout>
     <v-layout align-start justify-start row>
-        <v-btn style="color: white;" :color="companyData[`${radioGroup}`].colorCode" @click="copyElement">copy element to clipboard</v-btn>
-        <v-btn @click="copyHTML">copy HTML to clipboard</v-btn>
+      <v-btn style="color: white;" :color="companyData[`${radioGroup}`].colorCode" @click="copyElement">copy element to clipboard</v-btn>
+      <v-btn @click="copyHTML">copy HTML to clipboard</v-btn>
     </v-layout>
   </v-container>
 </template>
